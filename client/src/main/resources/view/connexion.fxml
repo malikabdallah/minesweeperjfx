@@ -1,36 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<VBox   xmlns="http://javafx.com/javafx/8"
-        xmlns:fx="http://javafx.com/fxml/1"
-        fx:controller="application.view.ConnexionView"
-        prefHeight="900.0" prefWidth="1600.0">
+<?import javafx.scene.control.Label?>
+<Pane prefHeight="900.0" prefWidth="1600.0" style="-fx-background-color: blu;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.view.ConnexionView">
+   <children>
+      <ImageView fitHeight="150.0" fitWidth="302.0" layoutX="239.0" layoutY="39.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/logo.png" />
+         </image>
+      </ImageView>
+      <Text layoutX="231.0" layoutY="263.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Login">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <TextField fx:id="nicknameTextField" layoutX="290.0" layoutY="245.0" prefHeight="25.0" prefWidth="254.0" />
+      <Button onAction="#connect" fx:id="connexionButton" layoutX="477.0" layoutY="303.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="68.0" text="login" />
+      <Label fx:id="errorLabel" layoutX="284.0" layoutY="220.0"/>
+   </children>
 
-    <children>
-
-        <HBox alignment="CENTER">
-            <children>
-                <Text text="Identifiant :"/>
-                <TextField fx:id="nicknameTextField" onKeyReleased="#connectKey"/>
-            </children>
-        </HBox>
-        <HBox alignment="CENTER">
-            <children>
-                <Button fx:id="connexionButton" onAction="#connect" text="Se connecter"/>
-            </children>
-        </HBox>
-        <HBox alignment="CENTER">
-            <children>
-                <Label fx:id="errorLabel" textFill="#d00b1a"/>
-            </children>
-        </HBox>
-
-    </children>
-
-</VBox>
+</Pane>

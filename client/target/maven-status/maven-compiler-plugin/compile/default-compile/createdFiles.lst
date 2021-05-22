@@ -1,0 +1,9 @@
+application\controlleur\Controller.class
+application\view\ViewFactory.class
+application\Main.class
+application\view\NewGameView.class
+application\view\CustomImage.class
+application\view\Connexion.class
+application\view\DemineurView.class
+application\view\ConnexionView.class
+application\view\IView.class

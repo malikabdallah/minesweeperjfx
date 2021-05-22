@@ -50,4 +50,8 @@ public class ConnexionView implements IView {
             return;
         }
     }
+
+    public void connect() {
+
+    }
 }
