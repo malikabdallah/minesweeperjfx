@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<VBox prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.view.NewGameView">
+
+    <children>
+        <VBox alignment="CENTER">
+            <children>
+                <Button onAction="#easy" prefHeight="25.0" prefWidth="56.0" text="Facile" />
+                <Button onAction="#medium" text="Normal" />
+                <Button onAction="#hard" text="Difficile" />
+            </children>
+        </VBox>
+
+        <Separator />
+        <VBox alignment="CENTER" prefHeight="358.0" prefWidth="800.0">
+            <children>
+
+                <HBox alignment="CENTER">
+                    <children>
+                        <Text text="Personnalisé" />
+                    </children>
+                </HBox>
+                <HBox alignment="CENTER">
+                    <children>
+                        <Text text="Taille" />
+                        <TextField fx:id="sizeTextField" prefHeight="25.0" prefWidth="244.0" />
+                    </children>
+                </HBox>
+                <HBox alignment="CENTER">
+                    <children>
+                        <Text text="Pourcentage de bombes" />
+                        <Slider fx:id="ptBombsSlider" max="99" min="1" showTickLabels="true" showTickMarks="true" />
+                    </children>
+                </HBox>
+                <HBox alignment="CENTER">
+                    <children>
+                        <Button fx:id="customButton" onAction="#custom" prefHeight="23.0" prefWidth="53.0" text="Créer" />
+                    </children>
+                </HBox>
+                <HBox alignment="CENTER">
+                    <children>
+                        <Label fx:id="errorLabel" textFill="#d00b1a" />
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+    </children>
+</VBox>
